@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="goal_pose" pkg="rostopic" type="rostopic" args="pub /move_base_simple/goal geometry_msgs/PoseStamped '{ header: {stamp: now, frame_id: 'map'}, pose: { position: {x: 2.826, y: -0.030, z: 0.0}, orientation: {x: 0.000, y: 0.000, z: 0.838, w: 0.546}}}'"/> 
+	
+	
+</launch>

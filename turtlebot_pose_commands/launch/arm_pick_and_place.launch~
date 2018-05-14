@@ -1,0 +1,10 @@
+<launch>
+	<!-- Launching the arm_bringup--> 
+  <include file="$(find turtlebot_arm_bringup)/launch/arm.launch" />
+
+	<!-- Launching the moveit package--> 
+  <include file="$(find turtlebot_arm_moveit_config)/launch/turtlebot_arm_moveit.launch" />
+
+	<!-- Launching the pick and place script-->
+ 	<node pkg="turtlebot_pose_commands" name="arm_pick_and_place" type="pick_and_place.py" />
+</launch>

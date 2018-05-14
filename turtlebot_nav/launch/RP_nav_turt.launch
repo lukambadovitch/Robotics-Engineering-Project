@@ -1,0 +1,14 @@
+<launch>
+		<!--Launch the LaserScan minimal-->
+        <include file="$(find turtlebot_le2i)/launch/remap_rplidar_minimal.launch" />
+
+		<!--Launch the AMCL with the initial position on the Map -->
+        <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" >
+          <arg name="map_file" value="/home/turtlebot/ros/indigo/catkin_ws/Bags/ClassMap.yaml" />
+	  <arg name="initial_pose_x" default="9.541"/>
+	  <arg name="initial_pose_y" default="-6.338"/>
+	  <arg name="initial_pose_a" default="1.803"/>
+        </include>
+	
+</launch>
+
